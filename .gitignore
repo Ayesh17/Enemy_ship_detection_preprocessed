@@ -1,0 +1,6 @@
+*.csv
+*.pkl
+HMM_train_data/*
+HMM_test_data/*
+Train_data/*
+Test_data/*
