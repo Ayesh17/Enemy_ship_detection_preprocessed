@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7342acfc-938e-449b-872f-9d5c88030718" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/decision_trees_based_feature_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/random_forest_based_feature_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/recursive_feature_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/univariate_feature_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Scripts/accuracy_and_loss_graphs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/Bi-LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/Bi-RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/Bidirectional_RNN_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/Bi_GRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/Bidirectional_GRU_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/GRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/GRU_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/LSTM_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/LSTM_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Scripts/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/RNN_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confusion_matrix.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/confusion_matrix.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate_using_confusion_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_using_confusion_matrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/DL_Models/Bidirectional_LSTM_model.py" afterDir="false" />
+    <list default="true" id="7342acfc-938e-449b-872f-9d5c88030718" name="Changes" comment="Commit 1">
+      <change beforePath="$PROJECT_DIR$/Python_Scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +20,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="85fa0015-76b5-4290-add9-c172857b8753" />
+        <option name="url" value="https://github.com/Ayesh17/Enemy_ship_detection_preprocessed.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2RFmP0uSsVp1AuA2RFPcBqJXu5D" />
   <component name="ProjectLevelVcsManager">
@@ -122,5 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Commit 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 1" />
   </component>
 </project>
