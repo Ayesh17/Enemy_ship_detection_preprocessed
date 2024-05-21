@@ -64,6 +64,7 @@ def load_dataset(data_dir, data_path='data'):
     return dataset, labels
 
 
+
 def create_model(input_shape, num_classes):
     model = Sequential()
     model.add(SimpleRNN(128, input_shape=input_shape, return_sequences=True))  # Using SimpleRNN instead of LSTM
