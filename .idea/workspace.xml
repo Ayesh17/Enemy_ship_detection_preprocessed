@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7342acfc-938e-449b-872f-9d5c88030718" name="Changes" comment="Commit 1">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/random_forest_based_feature_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/random_forest_based_feature_selection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/univariate_feature_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/Feature_Selection_Methods/univariate_feature_selection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python_Scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confusion_matrix.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/confusion_matrix.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

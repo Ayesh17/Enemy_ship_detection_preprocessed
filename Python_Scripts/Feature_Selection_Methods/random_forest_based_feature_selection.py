@@ -1,4 +1,7 @@
+import os
+
 import numpy as np
+import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 def random_forest_based_feature_selection(X, y, percentile):
@@ -33,14 +36,14 @@ def random_forest_based_feature_selection(X, y, percentile):
     print("X_selected", X_selected.shape)
     print("X_selected", X_selected[0])
 
-    # Create a directory to save individual CSV files
-    output_directory = 'selected_features_csv'
-    os.makedirs(output_directory, exist_ok=True)
-
-    # Save each instance as a separate CSV file
-    for i in range(X_selected.shape[0]):
-        instance_data = X_selected[i, :, :]
-        instance_df = pd.DataFrame(instance_data.reshape((200, -1)))
-        instance_df.to_csv(os.path.join(output_directory, f'selected_features_instance_{i + 1}.csv'), index=False)
+    # # Create a directory to save individual CSV files
+    # output_directory = 'selected_features_csv'
+    # os.makedirs(output_directory, exist_ok=True)
+    #
+    # # Save each instance as a separate CSV file
+    # for i in range(X_selected.shape[0]):
+    #     instance_data = X_selected[i, :, :]
+    #     instance_df = pd.DataFrame(instance_data.reshape((200, -1)))
+    #     instance_df.to_csv(os.path.join(output_directory, f'selected_features_instance_{i + 1}.csv'), index=False)
 
     return X_selected

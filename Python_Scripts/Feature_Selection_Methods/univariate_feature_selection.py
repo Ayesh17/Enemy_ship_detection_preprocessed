@@ -11,7 +11,7 @@ def univariate_feature_selection(X,y,percentile):
     # Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_reshaped, y_repeated, test_size=0.2, random_state=42)
 
-    # Select top 70% features using SelectPercentile
+    # Select top x% features using SelectPercentile
     selector = SelectPercentile(f_classif, percentile=percentile)
     X_train_selected = selector.fit_transform(X_train, y_train)
 

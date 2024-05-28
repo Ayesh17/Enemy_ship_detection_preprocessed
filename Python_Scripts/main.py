@@ -5,11 +5,7 @@ import numpy as np
 import pandas as pd
 import pickle
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import SelectPercentile, f_classif, RFE
 from sklearn.model_selection import train_test_split
-from keras.models import Sequential
-from keras.layers import Bidirectional, LSTM, Dense, Dropout, SimpleRNN, GRU
 from keras.utils import to_categorical
 from sklearn.metrics import confusion_matrix
 import random
@@ -17,9 +13,6 @@ import tensorflow as tf
 import keras
 from keras.callbacks import TensorBoard, EarlyStopping
 from sklearn.metrics import precision_score, recall_score, f1_score
-from sklearn.feature_selection import RFECV
-from sklearn.svm import SVC  # You may need to choose an appropriate estimator for your problem
-from sklearn.tree import DecisionTreeClassifier
 from Feature_Selection_Methods.univariate_feature_selection import univariate_feature_selection
 from Feature_Selection_Methods.decision_trees_based_feature_selection import decision_trees_based_feature_selection
 from Feature_Selection_Methods.random_forest_based_feature_selection import random_forest_based_feature_selection
@@ -66,17 +59,6 @@ def load_dataset(data_dir, data_path='data'):
     labels = labels[:, -1]
 
     return dataset, labels
-
-
-# def create_model(input_shape, num_classes):
-#     model = Sequential()
-#     model.add(SimpleRNN(128, input_shape=input_shape, return_sequences=True))  # Using SimpleRNN instead of LSTM
-#     model.add(Dropout(0.2))
-#     model.add(SimpleRNN(64))  # Using SimpleRNN instead of LSTM
-#     model.add(Dropout(0.2))
-#     model.add(Dense(64, activation='relu'))
-#     model.add(Dense(num_classes, activation='softmax'))
-#     return model
 
 
 def train_model(model, X_train, y_train, X_val, y_val,  epochs):
@@ -155,43 +137,6 @@ def make_pdf_of_confusion_matrix(cm):
     plt.savefig("confusion_matrix.pdf")
 
 
-
-# def feature_selection(X, y, percentile=100):
-#     # Assuming X is your 3D dataset with shape (2814, 200, 38)
-#     # Print the shape of X before reshaping
-#     print("pre_feature_selection", X.shape)
-#
-#     # Reshape it to (2814*200, 38) for feature selection
-#     X_reshaped = X.reshape((2814 * 200, 38))
-#
-#     y_repeated = np.repeat(y, 200)
-#
-#     # Split the dataset into training and testing sets
-#     X_train, X_test, y_train, y_test = train_test_split(X_reshaped, y_repeated, test_size=0.2, random_state=42)
-#
-#     # Use Decision Tree as the estimator for feature importance
-#     dt = DecisionTreeClassifier(random_state=42)
-#     dt.fit(X_train, y_train)
-#
-#     # Get feature importances
-#     feature_importances = dt.feature_importances_
-#
-#     # Get indices of the top features based on importance
-#     top_feature_indices = np.argsort(feature_importances)[::-1][:int((percentile / 100) * X_reshaped.shape[1])]
-#
-#     # Apply the same feature selection to the test set
-#     X_selected = X[:, :, top_feature_indices]
-#
-#     # Display the selected feature indices
-#     print("Selected feature indices:", top_feature_indices)
-#     print("Number of selected features:", len(top_feature_indices))
-#     print("X_selected", X_selected.shape)
-#     print("X_selected", X_selected[0])
-#
-#     return X_selected
-
-
-
 def main():
     # Load the dataset
     dataset, labels = load_dataset(train_data_dir)
@@ -203,12 +148,12 @@ def main():
 
     print("pre_feature_selection")
     # dataset_selected, labels_selected = feature_selection(dataset, labels)
-    percentile = 70
+    percentile = 90
 
-    dataset_selected = univariate_feature_selection(dataset, labels, percentile)
+    # dataset_selected = univariate_feature_selection(dataset, labels, percentile)
     # dataset_selected = decision_trees_based_feature_selection(dataset, labels, percentile)
     # dataset_selected = random_forest_based_feature_selection(dataset, labels, percentile)
-    # dataset_selected = recursive_feature_selection(dataset, labels, percentile)
+    dataset_selected = recursive_feature_selection(dataset, labels, percentile)
 
     print("post_feature_selection")
 
@@ -227,8 +172,8 @@ def main():
 
     # Create the model
     input_shape = (X_train.shape[1], X_train.shape[2])
-    model = RNN_model(input_shape, num_classes)
-    # model = GRU_model(input_shape, num_classes)
+    # model = RNN_model(input_shape, num_classes)
+    model = GRU_model(input_shape, num_classes)
     # model = LSTM_model(input_shape, num_classes)
     # model = Bidirectional_RNN_model(input_shape, num_classes)
     # model = Bidirectional_GRU_model(input_shape, num_classes)
