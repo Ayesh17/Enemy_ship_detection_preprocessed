@@ -43,6 +43,7 @@ tf.random.set_seed(42)
 
 def load_dataset(data_dir, data_path='data'):
     if data_dir == train_data_dir:
+        print("path", os.path.join(data_path, 'train_dataset.pkl'))
         with open(os.path.join(data_path, 'train_dataset.pkl'), 'rb') as f:
             save = pickle.load(f)
     elif data_dir == test_data_dir:
@@ -173,10 +174,10 @@ def main():
     # Create the model
     input_shape = (X_train.shape[1], X_train.shape[2])
     # model = RNN_model(input_shape, num_classes)
-    # model = GRU_model(input_shape, num_classes)
+    model = GRU_model(input_shape, num_classes)
     # model = LSTM_model(input_shape, num_classes)
     # model = Bidirectional_RNN_model(input_shape, num_classes)
-    model = Bidirectional_GRU_model(input_shape, num_classes)
+    # model = Bidirectional_GRU_model(input_shape, num_classes)
     # model = Bidirectional_LSTM_model(input_shape, num_classes)
 
     # Train the model
