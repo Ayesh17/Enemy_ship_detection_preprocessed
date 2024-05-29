@@ -148,11 +148,11 @@ def main():
 
     print("pre_feature_selection")
     # dataset_selected, labels_selected = feature_selection(dataset, labels)
-    percentile = 80
+    percentile = 70
 
-    dataset_selected = univariate_feature_selection(dataset, labels, percentile)
+    # dataset_selected = univariate_feature_selection(dataset, labels, percentile)
     # dataset_selected = decision_trees_based_feature_selection(dataset, labels, percentile)
-    # dataset_selected = random_forest_based_feature_selection(dataset, labels, percentile)
+    dataset_selected = random_forest_based_feature_selection(dataset, labels, percentile)
     # dataset_selected = recursive_feature_selection(dataset, labels, percentile)
 
     print("post_feature_selection")
